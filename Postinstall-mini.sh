@@ -25,6 +25,7 @@
 #			  -> Add a remote user, set passwd, with bash and sudo cmd
 #			  -> Install openssh-server and allow only remote user ssh
 #		          -> Adding minimal color prompt for remote user
+#			  -> configure your eth0 static ip instead of dhcp
 #                         
 # ----------------------------------------------------------------------
 # Dependencies
@@ -53,6 +54,7 @@
 # ./Postinstall-mini.sh -h  (for HELP)
 # OR ./Postinstall-mini.sh -cp (only check network and force color prompt)
 # OR ./Postinstall-mini.sh -s arnaud (add arnaud to sudo group)
+# OR ./Postinstall-mini.sh -i 192.168.1.100 255.255.255.0 192.168.1.1
 # *************************************************************************
 # Functions
 
@@ -119,6 +121,7 @@ cat <<EOF
 $(basename $0) [options]
 
 Options        
+
        -c (check)              : checking eth0 and internet connexion
        -u (update)             : removing cd rom repos & update repos & upgrade system
        -s [username] (sudo)    : adding an user to sudo ( -s username)
@@ -130,12 +133,25 @@ EOF
 exit
 
 }
+
 # for non-interactive mode
-while getopts ":cus:rph" opt; do
+while getopts ":cus:rphi:" opt; do
   case $opt in
     h)
       clear
       help_menu
+      exit 1
+      ;;
+    i)
+      shift $((OPTIND-2))
+      IP="$1"
+      NETMASK="$2"
+      GW="$3"
+      sed -i -e "s/iface eth0 inet dhcp/iface eth0 inet static\naddress $IP\nnetmask $NETMASK\ngateway $GW/g" /etc/network/interfaces
+     ifconfig eth0 down
+     ifconfig eth0 up 
+     echo "Your static ip has been set in /etc/network/interfaces"
+     ifconfig eth0
       exit 1
       ;;
     c)
