@@ -119,6 +119,11 @@ install_sqlite ()
 sudo apt-get install sqlite libsqlite3-dev
 }
 
+install_rails5 ()
+{
+gem install rails -v 5.0.1
+}
+
 # start program
 clear
 echo "Preparing debian for rails..."
@@ -147,5 +152,7 @@ install_postgres
 sleep 2
 install_sqlite
 echo "Installing sqlite db..."
+install_rails5
+echo "Installing rails 5..."
 sleep 2
 echo "TO DO:test rails 5 project with postgresql"
