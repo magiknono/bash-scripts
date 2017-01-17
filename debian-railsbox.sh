@@ -114,6 +114,11 @@ rm -f /tmp/caller
 #need to install rails 5 to see if it works
 }
 
+install_sqlite ()
+{
+sudo apt-get install sqlite libsqlite3-dev
+}
+
 # start program
 clear
 echo "Preparing debian for rails..."
@@ -139,5 +144,8 @@ install_rvm_ruby
 sleep 2
 echo "Installing postgresql db..."
 install_postgres
+sleep 2
+install_sqlite
+echo "Installing sqlite db..."
 sleep 2
 echo "TO DO:test rails 5 project with postgresql"
