@@ -98,7 +98,7 @@ source ~/.zshrc
 rbenv install 2.3.3
 rbenv global 2.3.3
 ruby -v
-#to do fix locales for fr with dpkg-reconfigure locales ?
+#fix with "$dpkg-reconfigure locales" and add "en_US.UTF-8" to fix the error msg
 gem install bundler rspec rubocop pry pry-byebug hub colored gist
 
 }
