@@ -127,7 +127,14 @@ install_tools ()
 {
 gem install hub
 }
-
+install_heroku ()
+{
+sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install heroku
+heroku --version
+}
 
 # start program
 clear
@@ -160,5 +167,9 @@ echo "Installing sqlite db..."
 install_rails5
 echo "Installing rails 5..."
 sleep 2
+install_tools
 echo "Installing other tools..."
+install_heroku
+sleep 2
+echo "Installing heroku toolbelt..."
 
