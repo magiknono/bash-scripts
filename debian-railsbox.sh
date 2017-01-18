@@ -123,6 +123,11 @@ install_rails5 ()
 {
 gem install rails -v 5.0.1
 }
+install_tools ()
+{
+gem install hub
+}
+
 
 # start program
 clear
@@ -155,4 +160,5 @@ echo "Installing sqlite db..."
 install_rails5
 echo "Installing rails 5..."
 sleep 2
+echo "Installing other tools..."
 echo "TO DO:test rails 5 project with postgresql"
