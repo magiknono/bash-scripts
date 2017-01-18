@@ -111,7 +111,7 @@ sudo su - postgres
 psql --command "CREATE ROLE `cat /tmp/caller` LOGIN createdb;"
 exit
 rm -f /tmp/caller
-#need to install rails 5 to see if it works
+
 }
 
 install_sqlite ()
@@ -161,4 +161,4 @@ install_rails5
 echo "Installing rails 5..."
 sleep 2
 echo "Installing other tools..."
-echo "TO DO:test rails 5 project with postgresql"
+
