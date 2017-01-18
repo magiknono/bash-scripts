@@ -129,10 +129,10 @@ gem install hub
 }
 install_heroku ()
 {
-sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
-curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+echo "deb http://toolbelt.heroku.com/ubuntu ./" | sudo tee- a /etc/apt/sources.list.d/heroku.list
+wget -O- https://toolbelt.heroku.com/apt/release.key | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install heroku
+sudo apt-get install -y heroku-toolbelt
 heroku --version
 }
 
