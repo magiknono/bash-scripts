@@ -10,12 +10,13 @@
 #
 # NAME	: 	    debian-nodejs.sh
 #
-# VERSION : 	  0.1
+# VERSION : 	    0.1
 #
-# DESCRIPTION : Install the latest nodejs LTS 6.X or EXPERIMENTAL 7.X in a minute for debian 8 (jessie) 32/64 bits
+# DESCRIPTION :     Install the latest nodejs LTS 6.X or EXPERIMENTAL 7 for debian 8 (jessie) 32/64 bits
 #
-# USAGE : 	    chmod a+x debian-nodejs.sh  
-#	 	            ./debian-nodejs.sh 
+# USAGE : 	    curl https://raw.githubusercontent.com/magiknono/bash-scripts/master/debian-nodejs.sh > debian-nodejs.sh
+#                   chmod u+x debian-nodejs.sh  
+#	 	    ./debian-nodejs.sh 
         
 
 # LTS OR EXPERIMENTAL
