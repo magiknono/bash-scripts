@@ -26,7 +26,6 @@
 #               3. Open a new term (ctrl T) and copy the script:  scp root@<IP-SERVER>:/root
 #               4. on the server : chmod u+x debian.do-sh && ./debian-do.sh (the prompt will ask you a remoteadmin password)
 #               5. quit your server with : exit && exit
-#!/usr/bin/env bash
 #
 echo -e "\033[032mUpdating repo\033[0m ..."
 sleep 1
