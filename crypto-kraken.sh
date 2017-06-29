@@ -18,16 +18,16 @@
 # DESCRIPTION : - Display the last value of cryptos by category from the kraken exchange.
 #               - Show the last value of a crypto from the kraken exchange. 
 #
-# USAGE		  : - (without arguments) ./crypto_kraken
-#             - (with one argument) ./crypto_kraken XBTEUR
+# USAGE	      : - (without arguments) ./crypto_kraken
+#               - (with one argument) ./crypto_kraken XBTEUR
 #				      
 #
 #
 check_last_eur_value ()
 {
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTEUR | sed -e 's/.*"c":."\([^"]*\).*/XBTEUR=\1€\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHEUR | sed -e 's/.*"c":."\([^"]*\).*/ETHEUR=\1€\n/'	
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=DASHEUR | sed -e 's/.*"c":."\([^"]*\).*/DASHEUR=\1€\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTEUR | sed -e 's/.*"c":."\([^"]*\).*/XBTEUR=\1€\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHEUR | sed -e 's/.*"c":."\([^"]*\).*/ETHEUR=\1€\n/'	
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=DASHEUR | sed -e 's/.*"c":."\([^"]*\).*/DASHEUR=\1€\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETCEUR | sed -e 's/.*"c":."\([^"]*\).*/ETCEUR=\1€\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=GNOEUR | sed -e 's/.*"c":."\([^"]*\).*/GNOEUR=\1€\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=LTCEUR | sed -e 's/.*"c":."\([^"]*\).*/LTCEUR=\1€\n/'
@@ -40,8 +40,8 @@ check_last_eur_value ()
 
 check_last_usd_value ()
 {
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTUSD | sed -e 's/.*"c":."\([^"]*\).*/XBTUSD=\1$\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHUSD | sed -e 's/.*"c":."\([^"]*\).*/ETHUSD=\1$\n/'	
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTUSD | sed -e 's/.*"c":."\([^"]*\).*/XBTUSD=\1$\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHUSD | sed -e 's/.*"c":."\([^"]*\).*/ETHUSD=\1$\n/'	
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=DASHUSD | sed -e 's/.*"c":."\([^"]*\).*/DASHUSD=\1$\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETCUSD | sed -e 's/.*"c":."\([^"]*\).*/ETCUSD=\1$\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=GNOUSD | sed -e 's/.*"c":."\([^"]*\).*/GNOUSD=\1$\n/'
@@ -56,12 +56,12 @@ check_last_usd_value ()
 
 check_last_xbt_value ()
 {
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTUSD | sed -e 's/.*"c":."\([^"]*\).*/XBTUSD=\1B\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTEUR | sed -e 's/.*"c":."\([^"]*\).*/XBTEUR=\1B\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTCAD | sed -e 's/.*"c":."\([^"]*\).*/XBTCAD=\1B\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTJPY | sed -e 's/.*"c":."\([^"]*\).*/XBTJPY=\1B\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTGBP | sed -e 's/.*"c":."\([^"]*\).*/XBTGBP=\1B\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHXBT | sed -e 's/.*"c":."\([^"]*\).*/ETHXBT=\1B\n/'	
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTUSD | sed -e 's/.*"c":."\([^"]*\).*/XBTUSD=\1B\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTEUR | sed -e 's/.*"c":."\([^"]*\).*/XBTEUR=\1B\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTCAD | sed -e 's/.*"c":."\([^"]*\).*/XBTCAD=\1B\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTJPY | sed -e 's/.*"c":."\([^"]*\).*/XBTJPY=\1B\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=XBTGBP | sed -e 's/.*"c":."\([^"]*\).*/XBTGBP=\1B\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHXBT | sed -e 's/.*"c":."\([^"]*\).*/ETHXBT=\1B\n/'	
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=DASHXBT | sed -e 's/.*"c":."\([^"]*\).*/DASHXBT=\1B\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETCXBT | sed -e 's/.*"c":."\([^"]*\).*/ETCXBT=\1B\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=GNOXBT | sed -e 's/.*"c":."\([^"]*\).*/GNOXBT=\1B\n/'
@@ -77,17 +77,17 @@ check_last_xbt_value ()
 }     
 check_last_eth_value ()
 {
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHXBT | sed -e 's/.*"c":."\([^"]*\).*/ETHXBT=\1E\n/'	
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHUSD | sed -e 's/.*"c":."\([^"]*\).*/ETHUSD=\1E\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHEUR | sed -e 's/.*"c":."\([^"]*\).*/ETHEUR=\1E\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHGBP | sed -e 's/.*"c":."\([^"]*\).*/ETHGBP=\1E\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHJPY | sed -e 's/.*"c":."\([^"]*\).*/ETHJPY=\1E\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHCAD | sed -e 's/.*"c":."\([^"]*\).*/ETHCAD=\1E\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHXBT | sed -e 's/.*"c":."\([^"]*\).*/ETHXBT=\1E\n/'	
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHUSD | sed -e 's/.*"c":."\([^"]*\).*/ETHUSD=\1E\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHEUR | sed -e 's/.*"c":."\([^"]*\).*/ETHEUR=\1E\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHGBP | sed -e 's/.*"c":."\([^"]*\).*/ETHGBP=\1E\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHJPY | sed -e 's/.*"c":."\([^"]*\).*/ETHJPY=\1E\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETHCAD | sed -e 's/.*"c":."\([^"]*\).*/ETHCAD=\1E\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ETCETH | sed -e 's/.*"c":."\([^"]*\).*/ETCETH=\1E\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=GNOETH | sed -e 's/.*"c":."\([^"]*\).*/GNOUSD=\1E\n/'
   wget -q -O - https://api.kraken.com/0/public/Ticker?pair=ICNETH | sed -e 's/.*"c":."\([^"]*\).*/ICNETH=\1E\n/'
- 	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=MLNETH | sed -e 's/.*"c":."\([^"]*\).*/MLNETH=\1E\n/'
-	wget -q -O - https://api.kraken.com/0/public/Ticker?pair=REPETH | sed -e 's/.*"c":."\([^"]*\).*/REPETH=\1E\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=MLNETH | sed -e 's/.*"c":."\([^"]*\).*/MLNETH=\1E\n/'
+  wget -q -O - https://api.kraken.com/0/public/Ticker?pair=REPETH | sed -e 's/.*"c":."\([^"]*\).*/REPETH=\1E\n/'
 }       
 
 #start program
