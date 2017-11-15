@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+-v#!/usr/bin/env bash
 #
 #        _      _     _                             _ _     _
 #     __| | ___| |__ (_) __ _ _ __        _ __ __ _(_) |___| |__   _____  __
@@ -50,7 +50,7 @@ install_latest_sublime3 ()
 install_latest_nodejs ()
 {
   #install the lastest nodejs and npm with repos for auto update
-  sudo curl -sL https://deb.nodesource.com/setup_7.x | sudo bash -
+  sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
   sudo apt-get install -y nodejs
 }
 
