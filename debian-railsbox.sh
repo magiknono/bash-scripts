@@ -10,11 +10,11 @@
 #
 # NAME        : debian-railsbox.sh
 #
-# VERSION     : 0.1
+# VERSION     : 0.2
 #
-# TESTED on   : Debian Jessie 8.6/8.7 (amd64) (with VirtualBox 5.1.12 r112440)
+# TESTED on   : Debian 8.6/8.7/9 (amd64) (with VirtualBox 5.1.12 r112440)
 #
-# DESCRIPTION : Setup a rails dev env ready on debian jessie with lewagon-dotfiles
+# DESCRIPTION : Setup a rails dev env ready on debian with lewagon-dotfiles
 #
 # INSPIRATION : See le wagon-setup for ubuntu https://github.com/lewagon/setup/blob/master/UBUNTU.md
 #               See lewagon-dotfiles https://github.com/lewagon/dotfiles
@@ -50,7 +50,7 @@ install_latest_sublime3 ()
 install_latest_nodejs ()
 {
   #install the lastest nodejs and npm with repos for auto update
-  sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+  sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
   sudo apt-get install -y nodejs
 }
 
