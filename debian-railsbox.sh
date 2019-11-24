@@ -95,8 +95,8 @@ sudo mkdir -p /usr/local/opt && sudo chown `whoami`:`whoami` $_
 git clone https://github.com/rbenv/rbenv.git /usr/local/opt/rbenv
 git clone https://github.com/rbenv/ruby-build.git /usr/local/opt/rbenv/plugins/ruby-build
 source ~/.zshrc
-rbenv install 2.3.3
-rbenv global 2.3.3
+rbenv install 2.6.3
+rbenv global 2.6.3
 ruby -v
 #fix with "$dpkg-reconfigure locales" and add "en_US.UTF-8" to fix the error msg
 gem install bundler rspec rubocop pry pry-byebug hub colored gist
@@ -121,7 +121,7 @@ sudo apt-get install sqlite libsqlite3-dev
 
 install_rails5 ()
 {
-gem install rails -v 5.0.1
+gem install rails -v 6.0.0
 }
 install_tools ()
 {
