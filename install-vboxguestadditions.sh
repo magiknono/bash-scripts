@@ -7,7 +7,7 @@
 
 # prepare virtualbox for guest additions
 apt install build-essential module-assistant -y
-m-a prepare
+m-a prepare -y
 
 # get version 6.1.4 and install
 wget https://download.virtualbox.org/virtualbox/6.1.4/VBoxGuestAdditions_6.1.4.iso
