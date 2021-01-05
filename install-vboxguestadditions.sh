@@ -13,7 +13,7 @@ m-a prepare -y
 wget https://download.virtualbox.org/virtualbox/6.1.4/VBoxGuestAdditions_6.1.4.iso
 mkdir /mnt/iso
 mount -o loop VBoxGuestAdditions_6.1.4.iso /mnt/iso
-bash /mnt/iso/VBOxLinuxAdditions.run
+bash /mnt/iso/VBoxLinuxAdditions.run
 
 # reboot
 # fullscreen OK on debian 10 guest with debian 10 host
